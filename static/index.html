@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/cover/ -->
+<html lang="en" class="gr__getbootstrap_com">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Fire Alarm Simulation</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="style/cover.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body class="text-center" data-gr-c-s-loaded="true" style="">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Fire Alarm Simulation</h1>
+        <p class="lead">This website is used to simulate <img
+                height="30"
+                width="30%"
+                src="https://www.honeywell.com/content/dam/honeywell/en-us/images/HON%20logo_200x37.png"
+                style="display: inline-block;" alt="honeywell">
+            alarm. Trigger button will trigger a series of
+            warning events.</p>
+        <p class="lead">
+            <button id="trigger" type="button" class="btn btn-outline-danger btn-lg">Trigger fire alarm</button>
+            &nbsp
+            &nbsp
+            <button id="resolve" type="button" class="btn btn-outline-secondary btn-lg">Stop fire alarm</button>
+        </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Cisco GVE PoV team</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    $("#trigger").click(function () {
+        $.post("/fire", function (data, status) {
+            alert(data);
+        });
+    });
+    $("#resolve").click(function () {
+        $.post("/resolved", function (data, status) {
+            alert(data)
+        });
+    });
+</script>
+</body>
+</html>

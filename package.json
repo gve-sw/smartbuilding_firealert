@@ -1,0 +1,31 @@
+{
+  "name": "smart_building_fire_alert",
+  "version": "1.0.0",
+  "description": "This project is a part of smart building demo which is mainly responsible for providing a sequence of action after fire being detected.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomKKlalala/smart_building_fire_alert.git"
+  },
+  "keywords": [
+    "node",
+    "webex",
+    "singlewire"
+  ],
+  "author": "KK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomKKlalala/smart_building_fire_alert/issues"
+  },
+  "homepage": "https://github.com/TomKKlalala/smart_building_fire_alert#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "jsxapi": "^5.0.3",
+    "net-snmp": "^1.2.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
